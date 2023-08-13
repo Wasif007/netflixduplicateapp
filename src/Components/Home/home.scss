@@ -1,0 +1,9 @@
+$bg:rgb(30, 30, 30);
+.header{
+    height: 70px;
+    background-color: $bg;
+    
+    >img{
+        height: 70px;
+    }
+}
