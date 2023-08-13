@@ -2,7 +2,45 @@
     padding: 0%;
     margin: 0%;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(16,16,16);
+    color: white;
 }
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+$bg:rgb(16, 16, 16);
+.header{
+    height: 70px;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    padding: 0.9rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    >div{
+        
+        width: 100%;
+        margin-left: 3vmax;
+        >a{
+            margin: 1.2vmax;
+            font-weight: 300;
+        }
+    }
+    >svg{
+        
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        &:hover{
+            color: hsl(0, 0%, 87%);
+        }
+    }
+    >img{
+        height: 70px;
+    }
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
