@@ -65,9 +65,20 @@ const Home = () => {
       }, []);
   return (
    <section className='home'>
-    <div className="banner">
+    {/* ${imageUrlBack}${item.poster_path} */}
+    <div
+                className="banner"
+                style={{
+                    backgroundImage: popularMovies[0]
+                        ? `url(${`${imageUrlBack}/${popularMovies[0].poster_path}`})`
+                        : "rgb(16, 16, 16)",
+                }}
+            >
+                {popularMovies[0] && <h1>{popularMovies[0].original_title}</h1>}
+                {popularMovies[0] && <p>{popularMovies[0].overview}</p>}
 
-    </div>
+               
+            </div>
     <Row title={"Upcoming"} arr={upcomingMovies}/>
     <Row title={"Now Playing"} arr={nowPlayingMovies}/>
     <Row title={"Popular Movies"} arr={popularMovies}/>
